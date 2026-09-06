@@ -29,7 +29,7 @@ def ingest_data(get_function, insert_function, table_name, cur):
 	print(f"=== DATABASE ({table_name} TABLE) ===")
 	data = get_function()
 	print(f"{table_name} recovered successfully. ✅")
-	data = insert_function(cur, data)
+	insert_function(cur, data)
 	print(f"{table_name} sent to the database successfully. ✅\n")
 
 def run_pipeline():
